@@ -286,7 +286,7 @@
 (function initContactForm() {
   // ⬇️ GANTI dengan nomor WhatsApp kamu (format: kode negara + nomor, tanpa + atau 0 di depan)
   // Contoh Indonesia: 628123456789
-  const WA_NUMBER = '6281234567890';
+  const WA_NUMBER = '6287895623651';
 
   const form = document.getElementById('contactForm');
   const toast = document.getElementById('toast');
