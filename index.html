@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelCraft Studio — Build. Design. Create.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <img src="assets/icon.png" alt="PixelCraft Studio Icon" class="logo-img" />
+        </div>
+        <span class="logo-text">Pixel<span class="logo-accent">Craft</span> <span class="logo-sub">Studio</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <!-- Hire Me -->
+        <a href="#contact" class="btn-hire">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Floating pixel background -->
+    <div class="pixel-bg" id="pixelBg"></div>
+    <!-- Gradient orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-container">
+      <!-- Left: Text -->
+      <div class="hero-text" data-aos="fade-right">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Creative Digital Studio
+        </div>
+        <h1 class="hero-headline">
+          Creative<br/>
+          Digital Studio<br/>
+          <span class="headline-gradient">for Modern Brands</span>
+        </h1>
+        <p class="hero-tagline" id="typingTarget"></p>
+        <p class="hero-desc">
+          PixelCraft Studio menggabungkan teknologi, desain visual, dan kreativitas modern untuk menciptakan pengalaman digital yang elegan, profesional, dan inovatif.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">
+            <i class="fa-solid fa-rocket"></i> Start Project
+          </a>
+          <a href="#portfolio" class="btn-secondary">
+            View Portfolio <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">120+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5★</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Animated Icon Video -->
+      <div class="hero-3d" id="hero3d" data-aos="fade-left">
+        <!-- Animated MP4 logo — memutar looping tanpa suara -->
+        <div class="hero-video-wrap">
+          <video
+            id="heroIconVideo"
+            class="hero-icon-video"
+            src="assets/icon_animasi.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="assets/icon.png"
+          ></video>
+          <!-- Fallback: tampil jika video tidak bisa diputar -->
+          <img
+            src="assets/icon.png"
+            alt="PixelCraft Studio Logo"
+            class="hero-icon-fallback"
+            id="heroIconFallback"
+          />
+        </div>
+        <!-- Glow & ring decorations -->
+        <div class="canvas-glow"></div>
+        <div class="hero-ring hero-ring-1"></div>
+        <div class="hero-ring hero-ring-2"></div>
+        <!-- Floating pixel dots around icon -->
+        <div class="icon-pixels" id="iconPixels"></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About PixelCraft Studio</h2>
+        <p class="section-desc">Kami adalah creative technology studio yang hadir untuk membangun pengalaman digital yang tidak terlupakan — dari konsep hingga eksekusi.</p>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="about-icon">
+            <i class="fa-solid fa-th"></i>
+          </div>
+          <h3>Pixel</h3>
+          <p>Setiap piksel adalah keputusan desain. Kami percaya detail terkecil membentuk keseluruhan karya yang luar biasa — presisi tanpa kompromi.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-icon">
+            <i class="fa-solid fa-hammer"></i>
+          </div>
+          <h3>Craft</h3>
+          <p>Keahlian adalah seni. Kami menghadirkan craftsmanship digital tinggi — kode bersih, desain elegan, dan solusi yang tahan uji waktu.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-icon">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <h3>Studio</h3>
+          <p>Ruang kreasi tanpa batas. Studio kami adalah ekosistem di mana ide bertemu teknologi, melahirkan karya digital yang bermakna dan berdampak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-desc">Solusi digital lengkap dari desain hingga pengembangan, editing hingga branding — semua dalam satu studio.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Fullstack Web Development</h3>
+          <p>Website modern, scalable, dan performa tinggi. Dari landing page hingga aplikasi web kompleks berbasis React, Next.js, Node.js.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Desain antarmuka intuitif dan indah. User experience yang terencana matang untuk konversi maksimal dan kepuasan pengguna.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+          <h3>Video Editing</h3>
+          <p>Konten video profesional, sinematik, dan engaging. Dari short-form content hingga full production dengan efek visual memukau.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Product Advertising</h3>
+          <p>Iklan produk yang menjual. Strategi visual dan kreatif yang tepat sasaran untuk memaksimalkan reach dan conversion rate.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Content Creation</h3>
+          <p>Konten kreatif yang resonan di berbagai platform. Visual storytelling yang kuat untuk membangun komunitas dan engagement.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Branding & Digital Media</h3>
+          <p>Identitas brand yang kuat dan konsisten. Logo, brand guide, social media kit, hingga strategi digital media yang komprehensif.</p>
+          <div class="service-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISION & MISSION ===================== -->
+  <section class="vision" id="vision">
+    <div class="container">
+      <div class="vision-grid">
+        <div class="vision-left" data-aos="fade-right">
+          <span class="section-tag">Our Purpose</span>
+          <h2 class="section-title">Vision & Mission</h2>
+          <p class="vision-intro">Kami hadir untuk mendefinisikan ulang standar kreativitas digital di era modern.</p>
+          <div class="vision-box">
+            <div class="vision-icon"><i class="fa-solid fa-eye"></i></div>
+            <div>
+              <h4>Visi</h4>
+              <p>Menjadi creative digital studio pilihan utama yang dikenal dunia karena inovasi, kualitas, dan dampak nyata dalam ekosistem digital global.</p>
+            </div>
+          </div>
+        </div>
+        <div class="vision-right" data-aos="fade-left">
+          <h4 class="mission-title">Misi Kami</h4>
+          <ul class="mission-list">
+            <li>
+              <div class="mission-bullet"><i class="fa-solid fa-check"></i></div>
+              <span>Menghadirkan solusi digital berkualitas tinggi yang melampaui ekspektasi klien</span>
+            </li>
+            <li>
+              <div class="mission-bullet"><i class="fa-solid fa-check"></i></div>
+              <span>Menggabungkan teknologi terkini dengan estetika desain yang kuat dan bermakna</span>
+            </li>
+            <li>
+              <div class="mission-bullet"><i class="fa-solid fa-check"></i></div>
+              <span>Membangun hubungan jangka panjang dengan klien melalui transparansi dan kepercayaan</span>
+            </li>
+            <li>
+              <div class="mission-bullet"><i class="fa-solid fa-check"></i></div>
+              <span>Terus berinovasi dan belajar agar selalu relevan di industri yang terus berkembang</span>
+            </li>
+            <li>
+              <div class="mission-bullet"><i class="fa-solid fa-check"></i></div>
+              <span>Menciptakan karya digital yang tidak hanya indah, tetapi juga berdampak bisnis nyata</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-desc">Setiap proyek adalah cerita unik. Berikut beberapa karya terbaik kami.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="portfolio-img" style="--cat-color: #FF6B2B;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-globe"></i>
+              <span>Web Development</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>NexaCommerce Platform</h4>
+            <p>E-commerce platform with custom CMS and payment gateway</p>
+            <div class="portfolio-tags">
+              <span>Next.js</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="portfolio-img" style="--cat-color: #E91E8C;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-pen-ruler"></i>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>FinTrack App Redesign</h4>
+            <p>Complete UI/UX overhaul for a fintech mobile application</p>
+            <div class="portfolio-tags">
+              <span>Figma</span><span>Prototyping</span><span>Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="portfolio-img" style="--cat-color: #7B2FBE;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-film"></i>
+              <span>Video Production</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>CineAds Campaign 2024</h4>
+            <p>Cinematic product advertisement for luxury fashion brand</p>
+            <div class="portfolio-tags">
+              <span>After Effects</span><span>Premiere</span><span>Color Grade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="portfolio-img" style="--cat-color: #3B82F6;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Branding</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>Lumora Brand Identity</h4>
+            <p>Full brand identity system for a wellness startup</p>
+            <div class="portfolio-tags">
+              <span>Logo</span><span>Brand Guide</span><span>Social Kit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="portfolio-img" style="--cat-color: #10B981;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-bullhorn"></i>
+              <span>Advertising</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>ProductLaunch X Series</h4>
+            <p>Multi-platform advertising campaign for tech product launch</p>
+            <div class="portfolio-tags">
+              <span>Social Ads</span><span>Motion</span><span>Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-img" style="--cat-color: #F59E0B;">
+            <div class="portfolio-mockup">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Content Creation</span>
+            </div>
+            <div class="portfolio-overlay">
+              <a href="#" class="btn-view">View Detail <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>TrendWave Social Series</h4>
+            <p>Monthly content creation program for lifestyle brand across TikTok & Instagram</p>
+            <div class="portfolio-tags">
+              <span>TikTok</span><span>Instagram</span><span>Reels</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BRAND COLORS ===================== -->
+  <section class="brand-colors" id="brand">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Brand Identity</span>
+        <h2 class="section-title">Brand Colors</h2>
+        <p class="section-desc">Palet warna PixelCraft Studio — pilihan yang cermat untuk mengkomunikasikan energi, kreativitas, dan profesionalisme.</p>
+      </div>
+
+      <div class="colors-grid">
+        <div class="color-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="color-swatch" style="background: linear-gradient(135deg, #FF6B2B, #FF8C42);"></div>
+          <div class="color-info">
+            <h4>Neon Orange</h4>
+            <span class="color-hex">#FF6B2B</span>
+            <p>Energi, kreativitas, dan semangat. Warna utama yang memancarkan kehangatan dan ambisi tanpa batas.</p>
+          </div>
+        </div>
+        <div class="color-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="color-swatch" style="background: linear-gradient(135deg, #7B2FBE, #9D4EDD);"></div>
+          <div class="color-info">
+            <h4>Electric Purple</h4>
+            <span class="color-hex">#7B2FBE</span>
+            <p>Inovasi, kemewahan, dan visi ke depan. Warna yang mencerminkan kedalaman kreativitas dan imajinasi.</p>
+          </div>
+        </div>
+        <div class="color-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="color-swatch" style="background: linear-gradient(135deg, #E8E8E8, #FFFFFF);" data-light="true"></div>
+          <div class="color-info">
+            <h4>Pure White</h4>
+            <span class="color-hex">#FFFFFF</span>
+            <p>Kejernihan, kemurnian, dan profesionalisme. Ruang napas yang memberi keseimbangan dalam desain.</p>
+          </div>
+        </div>
+        <div class="color-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="color-swatch" style="background: linear-gradient(135deg, #0D0D0D, #1A1A1A);"></div>
+          <div class="color-info">
+            <h4>Dark Graphite</h4>
+            <span class="color-hex">#0D0D0D</span>
+            <p>Kedalaman, kemewahan, dan misteri. Canvas gelap yang membuat setiap warna lain bersinar maksimal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Together</h2>
+        <p class="section-desc">Siap mewujudkan ide digitalmu? Mari berkolaborasi dan ciptakan sesuatu yang luar biasa.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Social & Info -->
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://tiktok.com/@pixelcraftstudio" target="_blank" class="social-card">
+              <div class="social-icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+              <div class="social-text">
+                <span class="social-platform">TikTok</span>
+                <span class="social-handle">@pixelcraftstudio</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right social-arr"></i>
+            </a>
+            <a href="https://instagram.com/pixelcraft_studio" target="_blank" class="social-card">
+              <div class="social-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+              <div class="social-text">
+                <span class="social-platform">Instagram</span>
+                <span class="social-handle">@pixelcraft_studio</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right social-arr"></i>
+            </a>
+            <a href="https://facebook.com/PixelCraftStudio" target="_blank" class="social-card">
+              <div class="social-icon facebook"><i class="fa-brands fa-facebook-f"></i></div>
+              <div class="social-text">
+                <span class="social-platform">Facebook</span>
+                <span class="social-handle">PixelCraft Studio</span>
+              </div>
+              <i class="fa-solid fa-arrow-up-right social-arr"></i>
+            </a>
+          </div>
+          <div class="contact-cta-box">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <p>Atau kirim email langsung ke:</p>
+            <a href="mailto:hello@pixelcraftstudio.id">hello@pixelcraftstudio.id</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Layanan</label>
+              <select id="service">
+                <option value="">Pilih layanan...</option>
+                <option>Fullstack Web Development</option>
+                <option>UI/UX Design</option>
+                <option>Video Editing</option>
+                <option>Product Advertising</option>
+                <option>Content Creation</option>
+                <option>Branding & Digital Media</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" rows="4" placeholder="Ceritakan proyek impianmu..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <div class="logo-icon">
+              <img src="assets/icon.png" alt="PixelCraft Studio Icon" class="logo-img" />
+            </div>
+            <span class="logo-text">Pixel<span class="logo-accent">Craft</span> <span class="logo-sub">Studio</span></span>
+          </a>
+          <p class="footer-tagline">Build. Design. Create.</p>
+          <p class="footer-desc">Creative digital studio untuk brand modern yang ingin tampil beda di era digital.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#services">Web Development</a></li>
+              <li><a href="#services">UI/UX Design</a></li>
+              <li><a href="#services">Video Editing</a></li>
+              <li><a href="#services">Branding</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="https://tiktok.com/@pixelcraftstudio" target="_blank">TikTok</a></li>
+              <li><a href="https://instagram.com/pixelcraft_studio" target="_blank">Instagram</a></li>
+              <li><a href="https://facebook.com/PixelCraftStudio" target="_blank">Facebook</a></li>
+              <li><a href="mailto:hello@pixelcraftstudio.id">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PixelCraft Studio. All rights reserved.</p>
+        <p>Build. Design. Create.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-check-circle"></i>
+    <span>Pesan berhasil dikirim! Kami akan segera menghubungi kamu.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
